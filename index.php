@@ -11,19 +11,24 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <h1 class="text-center">PHP_BADWORDS</h1>
-            <form action="badwords.php" method="post">
-                <div class="form-group">
-                    <label for="paragraph">Paragrafo:</label>
-                    <textarea class="form-control" name="paragraph" id="paragraph" rows="5" required></textarea>
-                </div>
+            <div class="col-6">
+                <form action="badwords.php" method="get">
+                    <div>
+                        <label class="text-success fw-bold fs-3 my-4" for="paragraph">Inserisci il paragrafo:</label>
+                        <textarea class="form-control mb-4 w-100 bg-success border-dark" name="paragraph" id="paragraph" placeholder="Scrivi un paragrafo"></textarea>
+                    </div>
+    
+                    <div>
+                        <label class="text-white mb-2" for="paragraph">Inserisci la parola da censurare</label>
+                    </div>
+    
+                    <input class="mb-4 form-control bg-success border-dark" id="paragraph" type="text" name="badword" placeholder="Inserisci la parola da censurare">
 
-                <div class="form-group">
-                    <label for="word">Parola da censurare:</label>
-                    <input type="text" class="form-control" id="word" name="word" required>
-                </div>
-
-                <button type="submit" class="btn btn-primart">Invia</button>
-            </form>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-outline-success">Invia</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
