@@ -1,8 +1,8 @@
 <?php
 
-$paragrafo=$_GET["paragrafo"];
-$badword=$_GET["badword"];
-$paroladacensurare= str_replace($badword, '***', $paragrafo);
+$paragrafo =$_GET["paragrafo"];
+$badword =$_GET["badword"];
+$paroladacensurare = str_replace($badword, '***', $paragrafo);
 
 ?>
 
@@ -17,29 +17,31 @@ $paroladacensurare= str_replace($badword, '***', $paragrafo);
 </head>
 <body class="bg-dark">
     <div class="container">
-        <div class="border rounded-4 p-5 my-5">
-            <h1 class="text-center text-success">Paragrafo utente</h1>
+        <div class="border rounded-4 border-success p-5 my-5">
+            <h1 class="text-center text-white">Dati dal form</h1>
 
-            <p class="text-success"> Il paragrafo iniziale è:
-                <?php echo $paragrafo ?>
+            <p class="text-white fw-bold text-center my-3"> Il paragrafo iniziale è:
+                <span class="fw-normal"><?php echo $paragrafo ?></span>
             </p>
 
-            <p class="text-success">La lunghezza del paragrafo è:
-                <?php echo strlen ($paragrafo) ?>
+            <p class="text-success text-white fw-bold text-center">La lunghezza del paragrafo è:
+                <span class="fw-normal"><?php echo strlen ($paragrafo) ?></span>
             </p>
         </div>
 
-        <div class="border-rounded-4 p-5 my-5">
-            <p class="text-success text-center mb-5 fw-bold">La parola da censurare è:
-                <?php echo $badword ?>
+        <div class="border rounded-4 border-success p-5 my-3">
+            <h1 class="text-center text-white pb-3">Statistiche paragrafo censurato</h1>
+            
+            <p class="text-white text-center mb-2 fw-bold">La parola da censurare è:
+                <span class="fw-normal"><?php echo $badword ?></span>
             </p>
 
-            <p class="text-success">Il paragrafo censurato è:
-                <?php echo $paroladacensurare ?>
+            <p class="text-white text-center mb-2 fw-bold">Il paragrafo censurato è:
+                <span class="fw-normal"><?php echo $paroladacensurare ?></span>
             </p>
 
-            <p class="text-center text-success my-3">La lunghezza del paragrafo è:
-                <?php echo strlen ($paroladacensurare) ?>
+            <p class="text-white text-center mb-2 fw-bold">La lunghezza del paragrafo è:
+                <span class="fw-normal"><?php echo strlen ($paroladacensurare) ?></span>
             </p>
         </div>
     </div>
